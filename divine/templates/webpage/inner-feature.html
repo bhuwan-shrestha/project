@@ -1,0 +1,263 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Feature Collection</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+<body>
+
+	<header class="up-contact">
+		<div class="container">
+			<div class="contact-up">
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i> Kathmandu, Nepal</p>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> contact@divineengineeringconsultancy.com</p>
+				<p><i class="fa fa-phone" aria-hidden="true"></i> +977 9841234567</p>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<nav class="navbar navbar-expand-md sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="home.html"><img src="images/logo.jpg"></a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="home.html" class="nav-link active">home</a></li>
+					<li class="nav-item"><a href="about-us.html" class="nav-link">about us</a></li>
+					<li class="nav-item"><a href="services.html" class="nav-link">services</a></li>
+					<li class="nav-item"><a href="Feature-collection.html" class="nav-link">featured collection</a></li>
+					<li class="nav-item"><a href="contact-us.html" class="nav-link">contact us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+=======
+{% extends 'webpage/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+>>>>>>> Pushing with Error
+
+	<section class="inner-banner">
+		<div class="container">
+			<div class="plan-name">
+<<<<<<< HEAD
+				<h3>Cottage House Plan</h3>
+			</div>
+			<div class="banner-slide">
+				<ul class="slider">
+					<li><figure style="background-image: url('images/collection3.jpg');"></figure></li>
+					<li><figure style="background-image: url('images/inner.jpg');"></figure></li>
+					<li><figure style="background-image: url('images/blueprint.gif');"></figure></li>
+					<li><figure style="background-image: url('images/bedroom.jpg');"></figure></li>
+=======
+				<h3>{{ feature_name.house_name }}</h3>
+			</div>
+			<div class="banner-slide">
+				<ul class="slider">
+					{% for feature in feature_list %}
+					<li><figure style="background-image: url('{{ feature.slide1.url }}');"></figure></li>
+					<li><figure style="background-image: url('{{ feature.slide2.url }}');"></figure></li>
+					<li><figure style="background-image: url('{{ feature.slide3.url }}');"></figure></li>
+					{% endfor %}
+>>>>>>> Pushing with Error
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="inner-detail">
+		<div class="container">
+			<div class="row">
+<<<<<<< HEAD
+=======
+					{% for about in feature_list %}
+>>>>>>> Pushing with Error
+				<div class="col-lg-8 col-md-12 col-sm-12">
+					<div class="detail-head">
+						<h3>About The Project</h3>
+					</div>
+					<div class="details">
+<<<<<<< HEAD
+						<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+						</p>
+					</div>
+					<div class="author">
+						<h4>Author</h4>
+						<p><span>Jhon Doe</span>- Construction Design</p>
+						<p><span>Annie Berg</span>- 3D modeling, interior design</p>
+					</div>
+				</div>
+=======
+						<p>{{ about.about }}</p>
+					</div>
+					<div class="author">
+						<h4>Author</h4>
+						<p><span>{{ about.author1 }}</span>- {{ about.position1 }}</p>
+						<p><span>{{ about.author2 }}</span>- {{ about.position2 }}</p>
+					</div>
+				</div>
+				{% endfor %}
+				{% for details in feature_name %}
+>>>>>>> Pushing with Error
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<div class="detail-head">
+						<h3>House Dimensions</h3>
+					</div>
+					<div class="house-detail">
+						<table>
+							<tr>
+								<th>House Net Area</th>
+<<<<<<< HEAD
+								<td>1976 Sq.Ft.</td>
+							</tr>
+							<tr>
+								<th>Build-Up Area</th>
+								<td>2208.24 Sq.Ft.</td>
+							</tr>
+							<tr>
+								<th>Floor Area</th>
+								<td>2018.83 Sq.Ft.</td>
+							</tr>
+							<tr>
+								<th>Total House Area</th>
+								<td>2771.42 Sq.Ft.</td>
+							</tr>
+							<tr>
+								<th>Cubic Volume</th>
+								<td>7443.11 Sq.Ft.</td>
+=======
+								<td>{{ details.dimention }} Sq.Ft.</td>
+							</tr>
+							<tr>
+								<th>Beds</th>
+								<td>{{ details.beds }}</td>
+							</tr>
+							<tr>
+								<th>Bath</th>
+								<td>{{ details.bath }}</td>
+							</tr>
+							<tr>
+								<th>Depth</th>
+								<td>{{ details.depth }}</td>
+							</tr>
+							<tr>
+								<th>Width</th>
+								<td>{{ details.width }}</td>
+>>>>>>> Pushing with Error
+							</tr>
+						</table>
+						<div class="detail-btn">
+							<a href="#">Request a Quote</a>
+						</div>
+					</div>
+				</div>
+<<<<<<< HEAD
+=======
+				{% endfor %}
+>>>>>>> Pushing with Error
+			</div>
+		</div>
+	</section>
+
+<<<<<<< HEAD
+	<footer>
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="q-links">
+							<div class="footer-head">
+								<h4>Quick Links</h4>
+							</div>
+							<div class="footer-link">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Projects</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="contact-us">
+							<div class="footer-head">
+								<h4>Contact Us</h4>
+							</div>
+							<div class="footer-contact">
+								<ul>
+									<li><i class="fa fa-street-view" aria-hidden="true"></i> Kathmandu, Nepal</li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i> 01 4321456, +977 9841234567</li>
+									<li><i class="fa fa-envelope" aria-hidden="true"></i> info@divineengineering.com</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="social">
+							<div class="footer-head">
+								<h4>Follow Us</h4>
+							</div>
+							<div class="footer-social">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="subscribe">
+							<div class="footer-head">
+								<h4>Subscribe</h4>
+							</div>
+							<div class="footer-subscribe">
+								<input type="email" name="email" placeholder="Email Address">
+								<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy-right">
+				<p>&copy; divineengineering.com | All rights reserved | Powered by: <a href="#">KOsYs</a></p>
+			</div>
+		</div>
+	</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+=======
+	{% endblock %}
+>>>>>>> Pushing with Error

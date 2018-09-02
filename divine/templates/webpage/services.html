@@ -1,0 +1,28 @@
+{% extends 'webpage/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+
+	<section class="services-head">
+		{% for banner in service_banner %}
+		<div class="top-header" style="background-image: url('{{ banner.image.url }}')">
+			<h1>Our Services</h1>
+		</div>
+		{% endfor %}
+	</section>
+
+	{% for details in service_details %}
+	<section class="services-detail">
+		<div class="services-image">
+			<figure style="background-image: url('{{ details.image.url }}');"></figure>
+		</div>
+		<div class="services-text">
+			<h3>{{ details.title }}</h3>
+			<p>{{ details.describe }}</p>
+			<a href="#">Read more</a>
+		</div>
+	</section>
+	{% endfor %}
+
+{% endblock %}

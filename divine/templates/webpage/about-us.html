@@ -1,0 +1,56 @@
+{% extends 'webpage/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+	<section class="about">
+		{% for img in abt_banner %}
+		<div class="top-header" style="background-image: url('{{ img.image.url }}')">
+			<h1>About US</h1>
+		</div>
+		{% endfor %}
+		<div class="about-wrapper">
+			<div class="container">
+				<div class="about-content">
+					<div class="row">
+						{% for details in about_details %}
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="about-img">
+								<figure style="background-image: url('{{ details.image.url }}');"></figure>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="about-detail">
+								<p>{{ details.describe }}</p>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="our-team">
+				<div class="container">
+					<div class="our-team-head">
+						<h2>Our Team</h2>
+					</div>
+					<div class="team-mem">
+						<div class="row">
+							{% for team in our_team %}
+							<div class="col-lg-3 col-md-6 col-sm-12">
+								<div class="team-detail">
+									<figure style="background-image: url('{{ team.profile.url }}');"></figure>
+									<p>{{ team.name }}</p>
+									<span>{{ team.position }}</span>
+									<a href="{{ team.facebook }}"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+									<a href="{{ team.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

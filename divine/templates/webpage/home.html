@@ -1,0 +1,198 @@
+{% extends 'webpage/base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+	<section class="banner">
+		<div class="banner-slider">
+			<ul class="slider">
+				{% for img in banner_img %}
+					<li><figure style="background-image: url('{{ img.banner_image.url }}');"></figure></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section class="plan">
+		<div class="container">
+			<div class="plan-wrapper">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="plan-content">
+							<div class="plan-img">
+								<img src="{% static "images/finance.png" %}">
+							</div>
+							<p>Finance</p>
+							<div class="arrow-img">
+								<img src="{% static "images/arrow.png" %}">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="plan-content">
+							<div class="plan-img">
+								<img src="{% static "images/plan.png" %}">
+							</div>
+							<p>Plan</p>
+							<div class="arrow-img">
+								<img src="{% static "images/arrow.png" %}">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="plan-content">
+							<div class="plan-img">
+								<img src="{% static "images/select.png" %}">
+							</div>
+							<p>Select</p>
+							<div class="arrow-img">
+								<img src="{% static "images/arrow.png" %}">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="plan-content">
+							<div class="plan-img">
+								<img src="{% static "images/build.png" %}">
+							</div>
+							<p>Build</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="collection">
+		<div class="container">
+			<div class="section-head">
+				<h2>Featured Collection</h2>
+			</div>
+			<div class="collection-wrapper">
+				<div class="row">
+					{% for list in feature_listing %}
+					<div class="col-lg-4 col-md-4 col-sm-12">
+<<<<<<< HEAD
+						<a href="{% url 'feature' %}" class="photo-collection">
+=======
+						<a href="{% url 'feature' pk=list.pk %}" class="photo-collection">
+>>>>>>> Pushing with Error
+							<div class="photo-thumb">
+								<figure style="background-image: url('{{ list.image.url }}')"></figure>
+							</div>
+							<div class="photo-info">
+								<ul>
+									<li>
+										<h4>{{ list.dimention }}</h4>
+										<p>SQ.FT.</p>
+									</li>
+									<li>
+										<h4>{{ list.beds }}</h4>
+										<p>BEDS</p>
+									</li>
+									<li>
+										<h4>{{ list.bath }}</h4>
+										<p>BATH</p>
+									</li>
+									<li>
+										<h4>{{ list.width }}</h4>
+										<p>WIDTH</p>
+									</li>
+									<li>
+										<h4>{{ list.depth }}</h4>
+										<p>DEPTH</p>
+									</li>
+								</ul>
+							</div>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="choose">
+		<div class="container">
+			<div class="section-head">
+				<h2>Why Choose Us</h2>
+			</div>
+			<div class="choose-content">
+				<div class="row">
+					{% for choose in choose_listing %}
+					<div class="col-lg-3 col-md-3 col-sm-12">
+						<div class="choose-wrapper">
+							<img src="{{ choose.image.url }}">
+							<h3>{{ choose.title }}</h3>
+							<p>{{ choose.describe }}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services">
+		<div class="container">
+			<div class="section-head">
+				<h2>Our Services</h2>
+			</div>
+			<div class="services-content">
+				{% for service in service_listing %}
+				<div class="services-wrapper">
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-12 services-img-wrap">
+							<div class="services-img">
+								<figure style="background-image: url('{{ service.image.url }}');"></figure>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-12">
+							<div class="services-txt">
+								<h3>{{ service.title }}</h3>
+								<p>{{ service.describe }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="action">
+		<div class="container">
+			{% for action in actionbtn %}
+			<div class="action-content">
+				<h2>{{ action.action_title }}</h2>
+				<a href="#"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Find Your Dream Home</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="testimonial">
+		<div class="container">
+			<div class="section-head">
+				<h2>Testimonial</h2>
+			</div>
+			<div class="testimonial-wrapper">
+				<ul class="testimonial-slider">
+					{% for testimonial in testimonial_listing %}
+					<li>
+						<div class="testimonial-content">
+							<p>{{ testimonial.describe }}</p>
+							<figure style="background-image: url('{{ testimonial.image.url }}');"></figure>
+							<div class="person-name">
+								<h5>{{ testimonial.name }}</h5>
+								<span>{{ testimonial.company }}</span>
+							</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
