@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,18 +49,10 @@
 			</div>
 		</div>
 	</nav>
-=======
-{% extends 'webpage/base.html' %}
-
-{% load static %}
-
-{% block body_block %}
->>>>>>> Pushing with Error
 
 	<section class="inner-banner">
 		<div class="container">
 			<div class="plan-name">
-<<<<<<< HEAD
 				<h3>Cottage House Plan</h3>
 			</div>
 			<div class="banner-slide">
@@ -70,17 +61,6 @@
 					<li><figure style="background-image: url('images/inner.jpg');"></figure></li>
 					<li><figure style="background-image: url('images/blueprint.gif');"></figure></li>
 					<li><figure style="background-image: url('images/bedroom.jpg');"></figure></li>
-=======
-				<h3>{{ feature_name.house_name }}</h3>
-			</div>
-			<div class="banner-slide">
-				<ul class="slider">
-					{% for feature in feature_list %}
-					<li><figure style="background-image: url('{{ feature.slide1.url }}');"></figure></li>
-					<li><figure style="background-image: url('{{ feature.slide2.url }}');"></figure></li>
-					<li><figure style="background-image: url('{{ feature.slide3.url }}');"></figure></li>
-					{% endfor %}
->>>>>>> Pushing with Error
 				</ul>
 			</div>
 		</div>
@@ -89,16 +69,11 @@
 	<section class="inner-detail">
 		<div class="container">
 			<div class="row">
-<<<<<<< HEAD
-=======
-					{% for about in feature_list %}
->>>>>>> Pushing with Error
 				<div class="col-lg-8 col-md-12 col-sm-12">
 					<div class="detail-head">
 						<h3>About The Project</h3>
 					</div>
 					<div class="details">
-<<<<<<< HEAD
 						<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
 						</p>
@@ -109,18 +84,6 @@
 						<p><span>Annie Berg</span>- 3D modeling, interior design</p>
 					</div>
 				</div>
-=======
-						<p>{{ about.about }}</p>
-					</div>
-					<div class="author">
-						<h4>Author</h4>
-						<p><span>{{ about.author1 }}</span>- {{ about.position1 }}</p>
-						<p><span>{{ about.author2 }}</span>- {{ about.position2 }}</p>
-					</div>
-				</div>
-				{% endfor %}
-				{% for details in feature_name %}
->>>>>>> Pushing with Error
 				<div class="col-lg-4 col-md-12 col-sm-12">
 					<div class="detail-head">
 						<h3>House Dimensions</h3>
@@ -129,7 +92,6 @@
 						<table>
 							<tr>
 								<th>House Net Area</th>
-<<<<<<< HEAD
 								<td>1976 Sq.Ft.</td>
 							</tr>
 							<tr>
@@ -147,25 +109,6 @@
 							<tr>
 								<th>Cubic Volume</th>
 								<td>7443.11 Sq.Ft.</td>
-=======
-								<td>{{ details.dimention }} Sq.Ft.</td>
-							</tr>
-							<tr>
-								<th>Beds</th>
-								<td>{{ details.beds }}</td>
-							</tr>
-							<tr>
-								<th>Bath</th>
-								<td>{{ details.bath }}</td>
-							</tr>
-							<tr>
-								<th>Depth</th>
-								<td>{{ details.depth }}</td>
-							</tr>
-							<tr>
-								<th>Width</th>
-								<td>{{ details.width }}</td>
->>>>>>> Pushing with Error
 							</tr>
 						</table>
 						<div class="detail-btn">
@@ -173,15 +116,10 @@
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
-=======
-				{% endfor %}
->>>>>>> Pushing with Error
 			</div>
 		</div>
 	</section>
 
-<<<<<<< HEAD
 	<footer>
 		<div class="container">
 			<div class="footer-wrapper">
@@ -258,6 +196,3 @@
 <script src="js/custom.js"></script>
 </body>
 </html>
-=======
-	{% endblock %}
->>>>>>> Pushing with Error

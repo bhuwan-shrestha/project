@@ -7,9 +7,5 @@ urlpatterns = [
     path('services', views.services, name="services"),
     path('collection', views.collection, name="collection"),
     path('contact', views.contactPage, name="contact"),
-<<<<<<< HEAD
     path('inner_feature', views.innerFeature, name='feature'),
-=======
-    path('collection/<int:pk>/feature', views.innerFeature, name='feature'),
->>>>>>> Pushing with Error
 ]

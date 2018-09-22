@@ -128,7 +128,6 @@ class ContactUs(models.Model):
 ### Inner Feature Section ####
 
 class InnerFeature(models.Model):
-<<<<<<< HEAD
     slide_image = models.ImageField(blank=False)
     about_project = models.TextField (blank=False)
 
@@ -145,20 +144,5 @@ class HouseDimenssion(models.Model):
 
     def __str__(self):
         return self.title
-=======
-
-    title = models.ForeignKey(FeatureName, on_delete=models.CASCADE)
-    slide1 = models.ImageField(blank=False)
-    slide2 = models.ImageField(blank=False)
-    slide3 = models.ImageField(blank=False)
-    about = models.TextField(max_length=400, blank=False)
-    author1 = models.CharField(max_length=60, blank=False)
-    position1 = models.CharField(max_length=60, blank=True)
-    author2 = models.CharField(max_length=60, blank=False)
-    position2 = models.CharField(max_length=60, blank=True)
-
-    # def __str__(self):
-    #     return self.title
->>>>>>> Pushing with Error
 
 

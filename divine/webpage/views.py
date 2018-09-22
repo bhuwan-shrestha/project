@@ -1,15 +1,7 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from webpage.models import BannerImage, HomeChoose, HomeService, ActionBtn, Testimonial, FeatureName, Social, AboutBanner, AboutDetails, OurTeam, ServiceBanner, ServiceDetails, FeatureCollection, ContactBanner, OfficeAddress, OfficeNumber, WorkingHours, InnerFeature, AuthorName, HouseDimenssion, ContactUs
 from webpage.forms import ContactUsForm
 
-=======
-from webpage.models import BannerImage, HomeChoose, HomeService, ActionBtn, Testimonial, FeatureName, Social, AboutBanner, AboutDetails, OurTeam, ServiceBanner, ServiceDetails, FeatureCollection, ContactBanner, OfficeAddress, OfficeNumber, WorkingHours, ContactUs, InnerFeature
-from webpage.forms import ContactUsForm
-
-from django.shortcuts import get_object_or_404
-
->>>>>>> Pushing with Error
 # Create your views here.
 def index(request):
     banner_list = BannerImage.objects.all()
@@ -88,11 +80,7 @@ def contactPage(request):
         'form' : form,
     }
 
-<<<<<<< HEAD
     
-=======
-
->>>>>>> Pushing with Error
 
     if request.method == "POST":
         form = ContactUsForm(request.POST)
@@ -108,7 +96,6 @@ def contactPage(request):
 
 
 
-<<<<<<< HEAD
 # def contactus(request):
 
     
@@ -130,19 +117,4 @@ def innerFeature(request):
         'social_contact' : social_list,
     }
 
-=======
-def innerFeature(request, pk):
-
-    feature_list = InnerFeature.objects.all()
-    # feature_name = get_object_or_404(FeatureName, pk=pk)
-    social_list = Social.objects.all()
-
-    inner_dict = {
-        'feature_list': feature_list,
-        # 'feature_name': feature_name,
-        'social_contact' : social_list,
-    }
-
-
->>>>>>> Pushing with Error
     return render(request, 'webpage/inner-feature.html', context=inner_dict)
